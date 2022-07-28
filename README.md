@@ -14,11 +14,10 @@ Things you may want to cover:
 
 - devise
 - Comment function
-- Heroku
 
 ## Technology outside the curriculum
 
-- Cloudinary
+- Chart.js
 
 ## Execution Procedure
 
@@ -37,6 +36,9 @@ Things you may want to cover:
 
 
 ## ER Diagram
-
+[ER Diagram]()
+![ER Diagram](./doc/ER_Diagram.png)
 
 ## Screen Transition Diagram
+[Screen transition]()
+![Screen transition](./doc/Screen_Transition.png)
