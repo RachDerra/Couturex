@@ -36,7 +36,7 @@ Things you may want to cover:
 
 
 ## ER Diagram
-[ER Diagram](https://cacoo.com/diagrams/8tPlbfmwEHzI4shD/4CE3B)
+[ER Diagram](https://cacoo.com/diagrams/tLb1ojinQ2mjM22q/97BA0)
 
 ![ER Diagram](./doc/ER_Diagram.png)
 
