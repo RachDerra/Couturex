@@ -36,9 +36,11 @@ Things you may want to cover:
 
 
 ## ER Diagram
-[ER Diagram]()
+[ER Diagram](https://cacoo.com/diagrams/8tPlbfmwEHzI4shD/4CE3B)
+
 ![ER Diagram](./doc/ER_Diagram.png)
 
 ## Screen Transition Diagram
-[Screen transition]()
+[Screen transition](https://cacoo.com/diagrams/L6OX92QXXzHkhcR3/4FF4D)
+
 ![Screen transition](./doc/Screen_Transition.png)
