@@ -33,9 +33,9 @@ Things you may want to cover:
 [Checksheet, Catalog Design, and Table Definition Share Link](https://docs.google.com/spreadsheets/d/1jlswKESigJrrl241Z7ZBpDHlPWVMRJVsXHVmNKAUTVw/edit?usp=sharing)
 
 ## Wireframe
-[Screen transition](https://cacoo.com/diagrams/P3rLajnvxbVKeiwY/1A79C)
+[Wireframe](https://cacoo.com/diagrams/P3rLajnvxbVKeiwY/1A79C)
 
-![Screen transition](./doc/Couturex_wireframe.png)
+![Wireframe](./doc/Couturex_wireframe.png)
 
 ## ER Diagram
 [ER Diagram](https://cacoo.com/diagrams/tLb1ojinQ2mjM22q/97BA0)
