@@ -27,11 +27,17 @@
         <a class="p-2 text-primary" href="#"> <strong>Comments</strong> </a>
       </nav>
       <% if user_signed_in? %>
+
+      <% if current_user.admin?%>
+        <%= link_to "Management page",admin_users_path, class:"font-weight-bold text-primary p-2" %>
+      <% end %>
+
         <%= link_to "Profile", users_show_path, class: 'btn btn-outline-primary mr-2' %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'btn btn-primary text-light' %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'btn btn-primary text-light' %> 
+
       <% else %>
-        <%= link_to "Guest User Login",users_guest_sign_in_path, method: :post%>
-        <%= link_to "Log in as Admin Guest",users_guest_admin_sign_in_path, method: :post%>
+        <%= link_to "Guest User Login",users_guest_sign_in_path, method: :post, class:"font-weight-bold text-primary p-2"%>
+        <%= link_to "Log in as Admin Guest",users_guest_admin_sign_in_path, method: :post, class:"font-weight-bold text-primary p-2"%>
         <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-outline-primary mr-2' %>
         <%= link_to "Sign in", new_user_session_path, class: 'btn btn-primary text-light' %>
       <% end %>
