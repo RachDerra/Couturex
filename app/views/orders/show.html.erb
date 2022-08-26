@@ -1,0 +1,66 @@
+<%= link_to 'Back', orders_path, class: 'btn btn-light mb-3' %>
+
+<div class="card" >
+  <div class="card-body">
+    <h2 class='card-title d-flex justify-content-between'>
+      <span> <b> <%= @order.model.name %> </b> </span>  
+      <div> 
+        <%= link_to 'Edit', edit_order_path(@order), class: 'btn btn-light' %>
+        <%= link_to 'Destroy', @order, method: :delete, class: 'btn btn-secondary text-light', data: { confirm: 'Are you sure?' } %>
+      </div>
+    </h2>
+
+    <div class="mb-4">
+
+      <span class="badge badge-primary mb-4">
+        <%= @order.etat_command %>
+      </span>
+
+      <p>
+        <strong>Montant total:</strong>
+        <%= @order.montant_total %>
+      </p>
+
+      <p>
+        <strong>Avance:</strong>
+        <%= @order.avance %>
+      </p>
+
+      <p>
+        <strong>Reste:</strong>
+        <%= @order.reste %>
+      </p>
+
+      <p>
+        <strong>Etat facture:</strong>
+        <%= @order.etat_facture %>
+      </p>
+
+      <p>
+        <strong>Livraison:</strong>
+        <%= @order.livraison %>
+      </p>
+
+      <p>
+        <strong>Priority:</strong>
+        <%= @order.priority %>
+      </p>
+
+      <p>
+        <strong>Model:</strong>
+        <%= @order.model.name %>
+      </p>
+
+      <p>
+        <strong>Client:</strong>
+        <%= @order.client.name %>
+      </p>
+ 
+      <p>
+        <strong>Image:</strong>
+        <%= image_tag @order.image.url %>
+      </p>
+
+    </div>
+  </div>
+</div>

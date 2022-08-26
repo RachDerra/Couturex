@@ -1,0 +1,22 @@
+<div class="card" >
+  <div class="card-body">
+
+    <h2 class='card-title d-flex justify-content-between mb-4'>
+      <span> <b> <a class="text-decoration-none bg-color-none" href="<%=categories_path%>"> Categories </a> </b> </span>  
+      <%= link_to 'New Category', new_category_path, class: 'btn btn-primary text-light' %> 
+    </h2>
+
+    <% @categories.each do |category| %>
+      <%= link_to category, class: 'text-decoration-none text-primary' do %>
+        <div class="card project-card mb-4" >
+          <div class="card-body">
+            
+            <h5 class='card-title'> <b> <%= category.name %> </b> </h5>
+            
+          </div>
+        </div>
+      <% end %>
+    <% end %> 
+
+  </div>
+</div>      

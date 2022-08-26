@@ -1,0 +1,158 @@
+<%= form_with(model: client, local: true) do |form| %>
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+        <% client.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :telephone %>
+    <%= form.text_field :telephone, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :genre %>
+    <%= form.select :genre, Client.genres.keys.to_a,  {}, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :dos %>
+    <%= form.number_field :dos, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :epaule %>
+    <%= form.number_field :epaule, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :poitrine %>
+    <%= form.number_field :poitrine, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :long_manche %>
+    <%= form.number_field :long_manche, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :tour_manche %>
+    <%= form.number_field :tour_manche, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :long_taille %>
+    <%= form.number_field :long_taille, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :tour_taille %>
+    <%= form.number_field :tour_taille, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :pinces %>
+    <%= form.number_field :pinces, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :long_camisole %>
+    <%= form.number_field :long_camisole, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :long_chemise %>
+    <%= form.number_field :long_chemise, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :poignet %>
+    <%= form.number_field :poignet, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :tour_bras %>
+    <%= form.number_field :tour_bras, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :long_robe %>
+    <%= form.number_field :long_robe, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :ventre %>
+    <%= form.number_field :ventre, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :tour_cou %>
+    <%= form.number_field :tour_cou, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :frappe %>
+    <%= form.number_field :frappe, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :ceinture %>
+    <%= form.number_field :ceinture, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :bassin %>
+    <%= form.number_field :bassin, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :genoux %>
+    <%= form.number_field :genoux, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :cuisse %>
+    <%= form.number_field :cuisse, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :long_jupe %>
+    <%= form.number_field :long_jupe, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :long_pantalon %>
+    <%= form.number_field :long_pantalon, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :bas %>
+    <%= form.number_field :bas, class:'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :image %>
+    <%= image_tag(client.image.url) if client.image && client.image.url %>
+    <%= form.file_field :image, class:'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:'btn btn-primary'%>
+  </div>
+<% end %>

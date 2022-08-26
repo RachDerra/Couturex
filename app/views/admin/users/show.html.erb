@@ -1,0 +1,90 @@
+<%= link_to 'Back', admin_users_path, class: 'btn btn-light mb-3' %>
+<div class="card" >
+  <div class="card-body">
+    <h2 class='card-title d-flex justify-content-between'>
+      <span> <b> <%= @user.name %> </b> </span>  
+      <div> 
+        <%= link_to 'Edit', edit_admin_user_path(@user), class: 'btn btn-light' %>
+        <%= link_to 'Destroy', admin_user_path(@user), method: :delete, class: 'btn btn-secondary text-light', data: { confirm: 'Are you sure?' } %>
+      </div>
+    </h2>
+
+      <p>
+        <strong>Name : </strong>
+        <%= @user.name %>                 
+      </p>
+
+      <p>
+        <strong>Email : </strong>
+        <%= @user.email %>
+      </p>
+
+      <p>
+        <strong>Admin : </strong>
+        <%= @user.admin %>
+      </p>
+
+      <p>
+        <strong>User Orders : </strong>
+        <%= @user.orders.count %>
+      </p>
+
+    
+  </div>
+</div>
+<br>
+<br>
+
+<div class="card" >
+  <div class="card-body">
+
+    <h2 class='card-title d-flex justify-content-between mb-4'>
+      <span> <b> <a class="text-decoration-none bg-color-none" ><%= @user.name %> Orders </a> </b> </span>  
+            
+    </h2>
+
+    
+        
+        <%= form_with url: orders_path, method: :get, local: true do |form| %>
+
+          <div class="input-group mb-4"> 
+            <%= form.text_field :name, class:'form-control' %>
+            <div class="input-group-append">  
+              <%= form.submit 'Search', class: 'btn btn-outline-primary mr-2' %>              
+            </div>
+          </div>
+        <% end %>    
+    
+      <% @orders.each do |order| %>
+      <%= link_to order, class: 'text-decoration-none text-primary' do %>
+        <div class="card project-card mb-4" >
+          <div class="card-body">
+            
+            <h5 class='card-title'> <b> <%= order.model.name %> </b> </h5>
+            <span class="badge badge-<%=order.badge_color%> mb-2">
+              <%= order.etat_command %>
+            </span>
+            <p> <%= order.montant_total %> </p>
+            <p> 
+              <%= order.etat_facture %> 
+            </p>
+            <p>
+              <%= order.livraison.strftime("%Y-%m-%d") %>
+            </p>
+            <p>
+               <%= order.priority %>
+            </p>
+            <p> 
+              <%= order.model.name %> 
+            </p>
+            <p> 
+              <%= order.client.name %> 
+            </p>
+
+          </div>
+        </div>
+      <% end %>
+    <% end %> 
+            
+  </div>
+</div>

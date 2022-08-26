@@ -1,0 +1,13 @@
+<%= link_to 'Back', categories_path, class: 'btn btn-light mb-3' %>
+
+<div class="card" >
+  <div class="card-body">
+    <h2 class='card-title d-flex justify-content-between'>
+      <span> <b> <%= @category.name %> </b> </span>  
+      <div> 
+        <%= link_to 'Edit', edit_category_path(@category), class: 'btn btn-light' %>
+        <%= link_to 'Destroy', @category, method: :delete, class: 'btn btn-secondary text-light', data: { confirm: 'Are you sure?' } %>
+      </div>
+    </h2>
+  </div>
+</div>

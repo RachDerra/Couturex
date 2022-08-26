@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  montant_total: 1
+  avance: 1
+  reste: 1
+  etat_facture: false
+  livraison: 2022-08-16
+  image: MyText
+  etat_command: 1
+  priority: 1
+  user: one
+
+two:
+  montant_total: 1
+  avance: 1
+  reste: 1
+  etat_facture: false
+  livraison: 2022-08-16
+  image: MyText
+  etat_command: 1
+  priority: 1
+  user: two

@@ -1,0 +1,43 @@
+<div class="card" >
+  <div class="card-body">
+
+    <h2 class='card-title d-flex justify-content-between mb-4'>
+      <span> <b> <a class="text-decoration-none bg-color-none" href="<%=orders_path%>"> Orders </a> </b> </span>  
+      
+      <%= link_to 'New Order', new_order_path, class: 'btn btn-primary text-light' %> 
+    </h2>
+
+    <% @orders.each do |order| %>
+      <%= link_to order, class: 'text-decoration-none text-primary' do %>
+        <div class="card project-card mb-4" >
+          <div class="card-body">
+            
+            <h5 class='card-title'> <b> <%= order.model.name %> </b> </h5>
+            <span class="badge badge-<%=order.badge_color%> mb-2">
+              <%= order.etat_command  %>
+            </span>
+            <p> 
+              <%= order.montant_total %> 
+            </p>
+            <p> 
+              <%= order.etat_facture %> 
+            </p>
+            <p>
+              <%= order.livraison.strftime("%Y-%m-%d") %>
+            </p>
+            <p>
+               <%= order.priority %>
+            </p>
+            <p> 
+              <%= order.model.name %> 
+            </p>
+            <p> 
+              <%= order.client.name %> 
+            </p>
+          
+          </div>
+        </div>
+      <% end %>
+    <% end %> 
+  </div>
+</div>

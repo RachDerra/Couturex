@@ -1,0 +1,8 @@
+<h1>Profil de M. <%= current_user.name%></h1>
+
+<h2>nom d'utilisateur</h2>
+<h2><div><%= current_user.email %></div></h2>
+
+
+
+<div><%= link_to 'Edit Profile', edit_user_registration_path, class:'btn btn-primary' %></div>

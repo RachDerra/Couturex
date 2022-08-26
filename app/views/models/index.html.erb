@@ -1,0 +1,37 @@
+<div class="card" >
+  <div class="card-body">
+
+    <h2 class='card-title d-flex justify-content-between mb-4'>
+      <span> <b> <a class="text-decoration-none bg-color-none" href="<%=models_path%>"> Models </a> </b> </span>  
+      <%= link_to 'New Model', new_model_path, class: 'btn btn-primary text-light' %> 
+    </h2>
+
+    <% @models.each do |model| %>
+      <%= link_to model, class: 'text-decoration-none text-primary' do %>
+        <div class="card project-card mb-4" >
+          <div class="card-body">
+            
+            <h5 class='card-title'> 
+              <b> 
+                <%= model.name %> 
+              </b> 
+            </h5>
+            
+            <p> 
+              <%= model.montant %> 
+            </p>
+
+            <p> 
+              <%= model.category.name %> 
+            </p>
+<!-- 
+            <p>
+              <%= image_tag(model.image.url) if model.image && model.image.url %>
+            </p>
+-->                       
+          </div>
+        </div>
+      <% end %>
+    <% end %> 
+  </div>
+</div>

@@ -1,0 +1,280 @@
+<%= link_to 'Back', clients_path, class: 'btn btn-light mb-3' %>
+<div class="card" >
+  <div class="card-body">
+    <h2 class='card-title d-flex justify-content-between'>
+      <span> <b> <%= @client.name %> </b> </span>  
+      <div> 
+        <%= link_to 'Edit', edit_client_path(@client), class: 'btn btn-light' %>
+        <%= link_to 'Destroy', @client, method: :delete, class: 'btn btn-secondary text-light', data: { confirm: 'Are you sure?' } %>
+      </div>
+    </h2>
+    <div class="mb-4">
+
+      
+      <table>
+        
+        <tr>
+          <td>
+            Genre:
+          </dt>
+          <td>
+            <%= @client.genre %>
+          </td>
+        </tr>
+        
+      
+        <tr>
+        <td>
+          <strong>Name:</strong>
+        </td>
+        <td>
+          <%= @client.name %>
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Email:</strong>
+        </td>
+        <td>
+          <%= @client.email %>
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Telephone:</strong>
+        </td>
+        <td>
+          <%= @client.telephone %>
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Genre:</strong>
+        </td>
+        <td>
+          <%= @client.genre %>
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Dos:</strong>
+        </td>
+        <td>
+          <%= @client.dos %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Epaule:</strong>
+        </td>
+        <td>
+          <%= @client.epaule %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Poitrine:</strong>
+        </td>
+        <td>
+          <%= @client.poitrine %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Long manche:</strong>
+        </td>
+        <td>
+          <%= @client.long_manche %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Tour manche:</strong>
+        </td>
+        <td>
+          <%= @client.tour_manche %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Long taille:</strong>
+        </td>
+        <td>
+          <%= @client.long_taille %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Tour taille:</strong>
+        </td>
+        <td>
+          <%= @client.tour_taille %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Pinces:</strong>
+        </td>
+        <td>
+          <%= @client.pinces %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Long camisole:</strong>
+        </td>
+        <td>
+          <%= @client.long_camisole %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Long chemise:</strong>
+        </td>
+        <td>
+          <%= @client.long_chemise %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Poignet:</strong>
+        </td>
+        <td>
+          <%= @client.poignet %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Tour bras:</strong>
+        </td>
+        <td>
+          <%= @client.tour_bras %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Long robe:</strong>
+        </td>
+        <td>
+          <%= @client.long_robe %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Ventre:</strong>
+        </td>
+        <td>
+          <%= @client.ventre %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Tour cou:</strong>
+        </td>
+        <td>
+          <%= @client.tour_cou %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Frappe:</strong>
+        </td>
+        <td>
+          <%= @client.frappe %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Ceinture:</strong>
+        </td>
+        <td>
+          <%= @client.ceinture %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Bassin:</strong>
+        </td>
+        <td>
+          <%= @client.bassin %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Genoux:</strong>
+        </td>
+        <td>
+          <%= @client.genoux %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Cuisse:</strong>
+        </td>
+        <td>
+          <%= @client.cuisse %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Long jupe:</strong>
+        </td>
+        <td>
+          <%= @client.long_jupe %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Long pantalon:</strong>
+        </td>
+        <td>
+          <%= @client.long_pantalon %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Bas:</strong>
+        </td>
+        <td>
+          <%= @client.bas %>cm
+        </td>
+        </tr>
+
+        <tr>
+        <td>
+          <strong>Image:</strong>
+        </td>
+        <td>
+          <%= image_tag @client.image.url %>
+        </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="card" >
+  <div class="card-body">
+
+    <h2 class='card-title d-flex justify-content-between mb-4'>
+      <span> <b> <a class="text-decoration-none bg-color-none" href="<%=clients_path%>"> Customers </a> </b> </span>  
+      <%= link_to 'New Customer', new_client_path, class: 'btn btn-primary text-light' %> 
+    </h2>
+
+    <%= form_with url: clients_path, method: :get, local: true do |form| %>
+
+      <div class="input-group mb-4"> 
+        <%= form.text_field :name, class:'form-control' %>
+        <div class="input-group-append">  
+          <%= form.submit 'Search', class: 'btn btn-outline-primary mr-2' %> 
+        </div>
+      </div>
+    <% end %>  
+
+    <% @clients.each do |client| %>
+      <%= link_to client, class: 'text-decoration-none text-primary' do %>
+        <div class="card project-card mb-4" >
+          <div class="card-body">
+            
+            <h5 class='card-title'> <b> <%= client.name %> </b> </h5>
+            <p> 
+              <%= client.email %> 
+            </p>
+            <p> 
+              <%= client.telephone %> 
+              <!-- <%= image_tag(client.image.url) if client.image && client.image.url %> -->
+            </p>
+          </div>
+        </div>
+      <% end %>
+    <% end %> 
+  </div>
+</div>
