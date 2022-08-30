@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+  get 'home/index'
+  get 'stats/index' => "stats#index"
   resources :clients 
-  resources :orders
+  resources :orders do
+    resources :comments
+  end
   resources :models
   resources :categories
 
   get "users/show" => "users#show"
-
+  
   devise_for :users 
   
   root "orders#index"

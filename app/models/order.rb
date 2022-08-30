@@ -5,6 +5,7 @@ class Order < ApplicationRecord
   belongs_to :user
   belongs_to :client
   belongs_to :model
+  has_many :comments, dependent: :destroy
   mount_uploader :image, ImageUploader
 
   def badge_color

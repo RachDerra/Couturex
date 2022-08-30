@@ -26,6 +26,7 @@ Things you may want to cover:
 >> $ bundle install <br>
 >> $ rails db:create <br>
 >> $ rails db:migrate <br>
+>> $ yarn add chart.js <br>
 >> $ rails s <br>
 
 ## Check Sheet, Catalog Design and Table Definition Document
