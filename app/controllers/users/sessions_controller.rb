@@ -28,12 +28,12 @@ class Users::SessionsController < Devise::SessionsController
   def guest_sign_in
     user = User.guest
     sign_in user
-    redirect_to root_path, notice: "Connecté en tant qu'utilisateur invité."
+    redirect_to orders_path, notice: "Connecté en tant qu'utilisateur invité."
   end
   
   def guest_admin_sign_in
     user = User.guest_admin
     sign_in user
-    redirect_to root_path, notice: "Je me suis connecté en tant qu'administrateur invité."
+    redirect_to orders_path, notice: "Je me suis connecté en tant qu'administrateur invité."
   end
 end

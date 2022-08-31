@@ -1,26 +1,38 @@
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header class="masthead mb-auto">
-        <div class="inner">
-        <h3 class="masthead-brand">Cover</h3>
-        <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Contact</a>
-        </nav>
-        </div>
-    </header>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-center">
+    
+        <div class="text-center">
+            <img src="<%= asset_path 'logo.png' %>" alt="" width="300" height="100" %>
+        </div>  
+        
+        <br><br>
 
-    <main role="main" class="inner cover">
-        <h1 class="cover-heading">Cover your page.</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-        <p class="lead">
-        <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        <p class="lead text-primary">
+            —A best way to manage your sewing workshop—
         </p>
-    </main>
 
-    <footer class="mastfoot mt-auto">
-        <div class="inner">
-        <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        <br> <br><br><br>
+
+        <div class="text-info">
+            COUTUREX is a sewing workshop management application. <br>
+            It is a support application for the management of customers, orders, <br>
+            models, accounting and the generation of statistics. <br>
+            When a customer is created, orders, patterns and invoices can be associated with him. <br>
+            It is also possible to create registered models. <br>
+            The application automatically generates statistics by month and by year <br>
+            according to the customers to allow the manager to observe the productivity of the company. <br>
         </div>
-    </footer>
+
 </div>
+
+<style>
+    .bg {
+      /* The image used */
+      background-image: url(<%= asset_path 'image4.jpg' %>);
+
+      height: 100%; 
+
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }                   
+</style>

@@ -306,6 +306,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave
   devise
+  i18n (~> 1.12)
   jbuilder (~> 2.7)
   kaminari
   letter_opener_web

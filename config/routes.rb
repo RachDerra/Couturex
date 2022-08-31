@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'home/index'
+  get 'home/index' => "home#index"
   get 'stats/index' => "stats#index"
   resources :clients 
   resources :orders do
@@ -12,8 +12,9 @@ Rails.application.routes.draw do
   
   devise_for :users 
   
-  root "orders#index"
-
+  root "home#index"
+  get '/orders' => "orders#index", :as => :user_root
+  
   namespace :admin do 
     resources :users 
   end
