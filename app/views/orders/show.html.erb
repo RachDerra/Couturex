@@ -17,27 +17,27 @@
       </span>
 
       <p>
-        <strong>Montant total:</strong>
+        <strong>Total amount:</strong>
         <%= @order.montant_total %>
       </p>
 
       <p>
-        <strong>Avance:</strong>
+        <strong>Advance payment:</strong>
         <%= @order.avance %>
       </p>
 
       <p>
-        <strong>Reste:</strong>
+        <strong>Remaining to be paid:</strong>
         <%= @order.reste %>
       </p>
 
       <p>
-        <strong>Etat facture:</strong>
+        <strong>Invoice status:</strong>
         <%= @order.etat_facture %>
       </p>
 
       <p>
-        <strong>Livraison:</strong>
+        <strong>Delivery date:</strong>
         <%= @order.livraison %>
       </p>
 
@@ -52,18 +52,18 @@
       </p>
 
       <p>
-        <strong>Client:</strong>
+        <strong>Customer:</strong>
         <%= @order.client.name %>
       </p>
  
       <p>
-        <strong>L'image du tissus : </strong>
+        <strong>The image of the fabric : </strong>
         <%= image_tag @order.image.url, class:'other_image' %>
       </p>
 
 
       <p>
-        <strong>L'image du modèle : </strong>
+        <strong>The image of the model : </strong>
         <%= image_tag @order.model.image.url, class:'other_image' %>
       </p>
       <br>
