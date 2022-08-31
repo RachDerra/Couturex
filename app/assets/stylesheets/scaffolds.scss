@@ -20,7 +20,7 @@ a:visited {
   color: #666; }
 
 a:hover {
-  color: rgb(24, 19, 187);
+  color: #fff;
   }
 
 th {
@@ -63,3 +63,18 @@ div.actions {
 
 label {
   display: block; }
+
+  .model_image{
+    width: 175px;
+    height: 175px;
+    float: right;
+  }
+
+  .float{
+    float: left
+  }
+ 
+  .other_image{
+    width: 200px;
+    height: 200px;
+  }

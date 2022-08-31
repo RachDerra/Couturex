@@ -1,6 +1,6 @@
 <%= link_to 'Back', orders_path, class: 'btn btn-light mb-3' %>
 
-<div class="card" >
+<div class="card mb-5" >
   <div class="card-body">
     <h2 class='card-title d-flex justify-content-between'>
       <span> <b> <%= @order.model.name %> </b> </span>  
@@ -57,9 +57,24 @@
       </p>
  
       <p>
-        <strong>Image:</strong>
-        <%= image_tag @order.image.url %>
+        <strong>L'image du tissus : </strong>
+        <%= image_tag @order.image.url, class:'other_image' %>
       </p>
+
+
+      <p>
+        <strong>L'image du modèle : </strong>
+        <%= image_tag @order.model.image.url, class:'other_image' %>
+      </p>
+      <br>
+
+      <div id="comments_area">
+        <!-- Rendu pour afficher une liste des commentaires publiés sur la page des détails du blog -->
+        <%= render partial: 'comments/index', locals: { comments: @comments, order: @order } %>
+      </div>
+
+      <!-- Pour afficher le champ de saisie des commentaires sur la page détaillée de la commande. -->
+      <%= render partial: 'comments/form', locals: { comment: @comment, order: @order } %>
 
     </div>
   </div>

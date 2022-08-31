@@ -10,25 +10,26 @@
       <%= link_to model, class: 'text-decoration-none text-primary' do %>
         <div class="card project-card mb-4" >
           <div class="card-body">
-            
-            <h5 class='card-title'> 
-              <b> 
-                <%= model.name %> 
-              </b> 
-            </h5>
-            
-            <p> 
-              <%= model.montant %> 
-            </p>
+            <div class='float'>
+                <h5 class='card-title'> 
+                  <b> 
+                    <%= model.name %> 
+                  </b> 
+                </h5>
+                
+                <p> 
+                  <%= model.montant %> 
+                </p>
 
-            <p> 
-              <%= model.category.name %> 
-            </p>
-<!-- 
+                <p> 
+                  <%= model.category.name %> 
+                </p>
+            
+            </div>
             <p>
-              <%= image_tag(model.image.url) if model.image && model.image.url %>
+              <%= image_tag(model.image.url, class:'model_image') if model.image && model.image.url %>
             </p>
--->                       
+                       
           </div>
         </div>
       <% end %>

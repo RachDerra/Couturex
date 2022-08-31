@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
   <head>
     <title>Couturex</title>
     <%= csrf_meta_tags %>
@@ -15,22 +15,24 @@
 
   </head>
 
-  <body>
+  <body class="bg mb-5">
 
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-      <h5 class="my-0 mr-md-auto font-weight-normal"> <strong> Couturex </strong> </h5>
-      <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-primary" href="<%=orders_path%>"> <strong >Orders</strong> </a>     
-        <a class="p-2 text-primary" href="<%=clients_path%>"> <strong>Customers</strong> </a>
-        <a class="p-2 text-primary" href="<%=models_path%>"> <strong>Models</strong> </a>
-        <a class="p-2 text-primary" href="<%=categories_path%>"> <strong>Category</strong> </a>
-        <a class="p-2 text-primary" href="#"> <strong>Comments</strong> </a>
-      </nav>
+      <img class="my-0 mr-md-auto" src="<%= asset_path 'logo.png' %>" alt="" width="250" height="50" %>
+      
       <% if user_signed_in? %>
 
-      <% if current_user.admin?%>
-        <%= link_to "Management page",admin_users_path, class:"font-weight-bold text-primary p-2" %>
-      <% end %>
+        <nav class="my-2 my-md-0 mr-md-3">
+          <a class="p-2 text-primary" href="<%=orders_path%>"> <strong >Orders</strong> </a>     
+          <a class="p-2 text-primary" href="<%=clients_path%>"> <strong>Customers</strong> </a>
+          <a class="p-2 text-primary" href="<%=models_path%>"> <strong>Models</strong> </a>
+          <a class="p-2 text-primary" href="<%=categories_path%>"> <strong>Category</strong> </a>
+          
+        </nav>
+
+        <% if current_user.admin?%>
+          <%= link_to "Management page",admin_users_path, class:"font-weight-bold text-primary p-2" %>
+        <% end %>
 
         <%= link_to "Profile", users_show_path, class: 'btn btn-outline-primary mr-2' %>
         <%= link_to "Log out", destroy_user_session_path, method: :delete, class: 'btn btn-primary text-light' %> 
@@ -42,10 +44,8 @@
         <%= link_to "Sign in", new_user_session_path, class: 'btn btn-primary text-light' %>
       <% end %>
     </div>
-    
-    
 
-    <div class="container pt-5" >
+    <div class="container mb-5 pt-5" >
 
       <% if notice %>
       <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -65,17 +65,15 @@
       <%= yield %>
     </div>
 
-    
 
-    
-
+    <footer class="bg-light mt-3 pt-2 fixed-bottom text-muted text-center text-small">
+      <p class="mb-1">&copy; 2015-2022 Dive Into Code</p>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Privacy</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Support</a></li>
+      </ul>
+    </footer>
   </body>
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2015-2022 Dive Into Code</p>
-    <ul class="list-inline">
-      <li class="list-inline-item"><a href="#">Privacy</a></li>
-      <li class="list-inline-item"><a href="#">Terms</a></li>
-      <li class="list-inline-item"><a href="#">Support</a></li>
-    </ul>
-  </footer>
+  
 </html>

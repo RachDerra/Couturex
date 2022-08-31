@@ -3,11 +3,29 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
 
+import Rails from "@rails/ujs"
+import Turbolinks from "turbolinks"
+import * as ActiveStorage from "@rails/activestorage"
+import "channels"
+import Chart from 'chart.js/auto';
+
+Rails.start()
+Turbolinks.start()
+ActiveStorage.start()
+
+document.addEventListener('turbolinks:load', () => {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: JSON.parse(ctx.canvas.dataset.labels),
+        datasets: [{
+            data: JSON.parse(ctx.canvas.dataset.data),
+        }]
+    },
+    });
+})
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
